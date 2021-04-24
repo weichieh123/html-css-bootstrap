@@ -1,0 +1,597 @@
+<!-- bgc: #FCF9EC -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./fontawesome-free-5.15.2-web/css/all.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+
+    <title>BS Verse</title>
+    <style>
+        /* just test */
+        /* .container-fluid {
+            outline: 1px solid blue;
+        }
+        .row *{
+            outline: 1px solid yellow;
+        } */
+  
+        /* important settings */
+        :root {
+            --bg: #FCF9EC;
+        }
+        .mytext-tag {
+            color: #8F5E13;
+        }
+        .mybd {
+            border-color: #595959;
+        }
+
+        html, body {
+            font-family: 'Noto Serif TC', serif;
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+
+        @media screen and (max-width: 991px) {
+            .mon {
+                font-size: 30px;
+            }
+            .date {
+                font-size: 90px;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            .mon {
+                font-size: 50px;
+            }
+            .date {
+                font-size: 120px;
+            }
+            .main-content {
+                border: 1px solid black;
+            }
+            .ar-left {
+            border-right: 1px solid black;
+            }
+        }
+
+        /* 為甚麼沒有用 */
+        @media screen and (max-width: 1199px) {
+            .footer-row p::after {
+                margin-bottom: 100px;
+            }
+        }
+
+        /* other settings */
+        .title-info {
+            width: 100%;
+            border-bottom: 3px solid black;
+        }
+        .nav-left {
+            min-height: 70px;
+        }
+        .nav-left img {
+            width: 50%;
+        }
+        .nav-bar i {
+            font-size: 40px;
+            text-align: right;
+        }
+        .title-row {
+            width: 100%;
+            border-top: 1.5px solid black;
+            border-bottom: 1.5px solid black;
+            /* margin-top: 5px; */
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        .link-left a,
+        .link-right a {
+            font-size: 20px;
+        
+            text-align: center;
+        }
+        /* .link-left a::before{
+            content: '';
+            width: 1px;
+            height: 1px;
+            background-color: black;
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+        } */
+
+        .key-row {
+            margin-bottom: 100px;
+        }
+        .ad-row {
+            margin-top: 100px;
+            margin-bottom: 150px;
+        }
+        .ar-row {
+            border-bottom: 1.5px solid #595959;
+        }
+        .footer-row p::after {
+            content: '';
+            display: block;
+            margin: 15px 0;
+            width: 18px;
+            height: 1px;
+            background-color: white;
+        }
+        .footer-logo {
+            bottom: 20px;
+            right: 20px;
+        }
+        .footer-bar {
+            /* width: 100%; */
+            background-color: #2F2F2F;
+            padding:  0;
+            color: #FFF
+            
+        }
+        .footer-bar img {
+            width: 35px;
+            height: 35px;
+        }
+        .footer-bar small {
+            width: 300px;
+        }
+        
+    </style>
+
+
+</head>
+
+<body>
+    <!-- container p-0內容會歪掉 -->
+    <nav class="container px-0">
+        <div class="d-flex title-info col-12 mt-3 pb-1 px-2">
+            <small class="p-0">屬於我們時代的文化媒體</small>
+        </div>
+        <div class="d-flex title-row justify-content-between align-items-center my-2 px-2">
+            <div class="nav-left d-flex align-items-center col-5 p-0 ">
+                <img class="w-100" src="./verse-images/verse-logo.svg" alt="">
+            </div>
+            <!-- 要寫d-md-flex才不會因為d-md-block d-none而位置跑掉 -->
+            <div class="nav-right d-md-flex col-5 justify-content-end d-none d-md-block">
+                <div class="">
+                    <small class="d-block">Issue 04</small>
+                    <small class="d-block">誰還在讀書？ »</small>
+                </div>
+                <div class="">
+                    <span class="mon text-center ">Apr.</span>
+                    <span class="date text-center ">01</span>
+                </div>
+            </div>
+            <div class="nav-bar d-flex col-2 d-block d-md-none justify-content-end p-0">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <!-- 要寫d-md-flex才不會因為d-md-block d-none而位置跑掉 -->
+            <div class="link-left col-5 p-0 m-0 d-md-flex d-md-block d-none ">
+                <a class="mx-auto" href="#">專文</a>
+                <a class="mx-auto" href="#">專欄</a>
+                <a class="mx-auto" href="#">影像</a>
+                <a class="mx-auto" href="#">雜誌</a>
+                <a class="mx-auto" href="#">商鋪</a>
+                <a class="mx-auto" href="#">資訊</a>
+            </div>
+            <!-- 要寫d-md-flex才不會因為d-md-block d-none而位置跑掉 -->
+            <div class="link-right col-4 d-md-flex justify-content-end p-0 m-0 d-md-block d-none">
+                <a class="mx-auto" href="#">電子報</a>
+                <a class="mx-auto" mx-autohref="#">搜尋</a>
+                <a class="mx-auto" href="#">登入</a>
+                <a class="mx-auto" href="#">購物袋</a>
+            </div>
+        </div>
+
+    </nav>
+    <main>
+
+        <!--border border-dark  -->
+        <div class="container main-content my-3">
+            <!-- Key View ---------------------------------->
+            <div class="key-row row">
+                <div class="col-12">
+                    <small><a class="px-3 mytext-tag" href="#">人物</a></small>
+                    <small><a class="px-3 mytext-tag" href="#">音樂</a></small>
+                    <h3 class="px-3 mt-2 mb-4"><a href="#">鄭宜農專欄：關於永恆的雨之歌，唱起了帶走困惑的〈大雨城市〉</a></h3>
+                    <img class="d-block w-100" src="./verse-images/main-4.jpg" alt="">
+                    <p class="p-0 text-center mt-3"><a href="#">我們總是能藉著描述一場雨，讓感情變得詩意，讓大家在聽著、唱著的瞬間，心頭便下起了屬於自己意義非凡的那一場雨。 </a></p>
+                </div>
+            </div>
+            <!-- AD ---------------------------------->
+            <div class="ad-row row justify-content-center px-4">
+                <div class="d-flex col-12 flex-column flex-md-row align-items-center justify-content-between border-top border-bottom border-dark p-0 py-2 text-center">
+                    <div class="col-10 col-md-5">
+                        <img class="w-100" src="./verse-images/ad-1.jpg" alt="">
+                    </div>
+                    <div class="col-10 col-md-5 my-1">
+                        <h2>極致尊榮乘車體驗</h2>
+                        <h2>盡在 LEXUS LM</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Article 1 ----------------------------->
+            <div class="arinfo-row row mt-5">
+                <p class="text-center"><a href="#">走入國家影視聽中心的影音片庫</a></p>
+                <h3 class="text-center"><a href="#">樹林裡的國家寶藏 </a></h3>
+            </div>
+            <div class="row px-4">
+                <div class="ar-row col-12 d-lg-flex align-items-center justify-content-between py-5">
+                    <div class="ar-left col-12 col-lg-8 m-0">
+                        <div class="d-flex justify-content-between flex-column flex-lg-row article border-bottom border-dark py-4 m-4">
+                            <div class="col mx-2">
+                                <img class="w-100 p-0" src="./verse-images/ar-1-spe-6.jpg" alt="">
+                            </div>
+                            <div class="col mx-2">
+                                <p><a class="mytext-tag" href="#">精選書摘</a></p>
+                                <h4><a href="#">武俠導演胡金銓的動畫遺產：《張羽煮海》結合中式傳奇與台灣海洋風情</a></h4>
+                                <p><a href="#">《張羽煮海》是國家影視聽中心的精裝非賣品，「這本書最初只求推廣，暫時先不販售。」VERSE獨家揭秘，帶大家一探這可遇不可求的珍藏。</a></p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between flex-column flex-lg-row article py-4 m-4 px-0">
+                            <div class="col mx-2">
+                                <img class="w-100" src="./verse-images/ar-2.jpg" alt="">
+                            </div>
+                            <div class="col mx-2">
+                                <p><a class="mytext-tag" href="#">藝文</a></p>
+                                <h4><a href="#">將國家記憶存進樹林：希望片庫有一座新冰箱 冷藏歷史才可能回到未來</a></h4>
+                                <p><a href="#">國家影視聽中心執行長王君琦初次造訪片庫那天，在工廠林立的樓房間迷了路，誤入隔壁麵粉廠，好不容易摸索找到正確位置，發現對門竟是紙紮廠。</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ar-right d-none d-lg-block col-lg-4 m-0 d-flex justify-content-center">
+                        <div class="article m-4 ">
+                            <img class="w-100" src="./verse-images/ar-3.jpg" alt="">
+                            <div>
+                                <p><a class="mytext-tag" href="#">藝文</a></p>
+                                <h4><a href="#">藍祖蔚的藍色電影夢：四十年了，從電影圖書館到國家影視聽中心</a></h4>
+                                <p><a href="#">在成為影視聽中心董事長前，藍祖蔚已是著名影評人、記者，也曾主持電台節目，亦曾任中影製片部經理，但最為人所熟悉的是他的抒情文體。</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Article 2 ------------------------------>
+            <div class="arinfo-row row mt-5">
+                <p class="text-center"><a href="#">2020｜為什麼大家開始愛看台灣電影</a></p>
+                <h3 class="text-center"><a href="#">台灣製造！優良電影現正熱映中 </a></h3>
+            </div>
+            <div class="row px-4">
+                <div class="ar-row col-12 d-lg-flex align-items-center justify-content-between py-5">
+                    <div class="ar-left col-12 col-lg-8 m-0">
+                        <div class="d-flex justify-content-between flex-column flex-lg-row article border-bottom border-dark py-4 m-4">
+                            <div class="col mx-2">
+                                <img class="w-100 p-0" src="./verse-images/ar-4.jpg" alt="">
+                            </div>
+                            <div class="col mx-2">
+                                <p><a class="mytext-tag" href="#">生活</a></p>
+                                <h4><a href="#">一不小心就會看完的超有趣國片：從《大佛普拉斯》到《消失的情人節》</a></h4>
+                                <p><a href="#">內行看門道，大家也要看熱鬧，這次就來讓《VERSE》推薦令人出乎意料、一不小心就會看完的超有趣國片，供各位歡度週末假期。</a></p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between flex-column flex-lg-row article py-4 m-4 px-0">
+                            <div class="col mx-2">
+                                <img class="w-100" src="./verse-images/ar-5.jpg" alt="">
+                            </div>
+                            <div class="col mx-2">
+                                <p><a class="mytext-tag" href="#">人物</a></p>
+                                <h4><a href="#">大夢想家魏德聖：追尋台灣電影新座標 ACTION！（上）</a></h4>
+                                <p><a href="#">魏德聖的《海角七號》以上億票房，使國片在21世紀走出黑夜，接著《賽德克巴萊》再創里程碑，而今他的夢想是「台灣三部曲」。</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ar-right d-none d-lg-block col-lg-4 m-0 d-flex justify-content-center">
+                        <div class="article m-4">
+                            <img class="w-100" src="./verse-images/ar-6.jpg" alt="">
+                            <div>
+                                <p><a class="mytext-tag" href="#">人物</a></p>
+                                <h4><a href="#">大夢想家魏德聖：追尋台灣電影新座標 ACTION！（下）</a></h4>
+                                <p><a href="#">魏德聖坦言，《海角七號》上映前，他覺得票房五千萬是實力，八千萬是他們的行銷結果，八千萬以上是整個大環境的天時地利人和。</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- Special Words ------------------------------>
+            <div class="row mt-5">
+                <h3 class="text-center"><a href="#">專文</a></h3>
+                <p class="text-center"><a href="#">Words & Images</a></p>
+            </div>
+            <div class="px-4">
+                <div class="row col-12 border-bottom border-dark justify-content-between m-0">
+                    <div class="col-md-4">
+                        <div class="card bg-transparent border-0">
+                            <img class="w-100" src="./verse-images/spe-1.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body px-0">
+                                <small class="my-2"><a class="mytext-tag" href="#">商業</a></small>
+                                <small class="my-2"><a class="mytext-tag" href="#">地方</a></small>
+                                <h4 class="card-title my-2"><a href="#">台南友愛街旅館：用企畫力擾動一座古城</a></h4>
+                                <p class="card-text my-3"><a href="#">以台南老城元素、大正時代浪漫美學、自然綠意、主題選書及南國日光打造的U.I.J，讓不期而遇的美好隨機發生。</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-transparent border-0">
+                            <img class="w-100" src="./verse-images/spe-2.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body px-0">
+                                <small class="my-2"><a class="mytext-tag" href="#">人物</a></small>
+                                <small class="my-2"><a class="mytext-tag" href="#">影劇</a></small>
+                                <h4 class="card-title my-2"><a href="#">《削瘦的靈魂》與歪邪作家：七等生散步到哪，哪裡就是通霄秋茂園</a></h4>
+                                <p class="card-text my-3"><a
+                                        href="#">朱賢哲導演以紀錄片捕捉作家「七等生」在斗室裡伏案苦思寫作叛亂，而作家的故鄉苗栗通霄，有座奇異歪邪的秋茂園，正恰似七等生之文體風格。</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-none d-md-block">
+                        <div class="card bg-transparent border-0">
+                            <img class="w-100" src="./verse-images/spe-3.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body px-0">
+                                <small class="my-2"><a class="mytext-tag" href="#">人物</a></small>
+                                <small class="my-2"><a class="mytext-tag" href="#">音樂</a></small>
+                                <h4 class="card-title my-2"><a href="#">撐Live House不簡單：河岸留言創辦人林正如 ft.1976、董運昌、乩童秩序</a></h4>
+                                <p class="card-text my-3"><a
+                                        href="#">河岸留言成立滿20年，名稱源自林正如、雷光夏、黃中岳於大學畢業前夕舉辦的音樂會。今年三月盛大舉辦河岸廿音樂祭。</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-none d-md-block">
+                        <div class="card bg-transparent border-0">
+                            <img class="w-100" src="./verse-images/spe-4.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body px-0">
+                                <small class="my-2"><a class="mytext-tag" href="#">商業</a></small>
+                                <small class="my-2"><a class="mytext-tag" href="#">地方</a></small>
+                                <h4 class="card-title my-2"><a href="#">矛盾尚未解決，同志仍須努力：台灣土地改革與WTO的進擊之路</a></h4>
+                                <p class="card-text my-3"><a
+                                        href="#">關於台灣土地改革，及加入WTO面臨到各式挑戰，我們邀請長期關注農村問題的作詞人鍾永豐撰文，這次他以犀利角度回應公視《未完成的任務》。</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-none d-md-block">
+                        <div class="card bg-transparent border-0">
+                            <img class="w-100" src="./verse-images/spe-5.jpg" class="card-img-top" alt="...">
+                            <div class="card-body px-0">
+                                <small class="my-2"><a class="mytext-tag" href="#">商業</a></small>
+                                <small class="my-2"><a class="mytext-tag" href="#">地方</a></small>
+                                <h4 class="card-title my-2"><a href="#">我們搖籃的美麗島：吟詠李雙澤，不羈的文藝復興人</a></h4>
+                                <p class="card-text my-3"><a
+                                        href="#">猶若紀念自由主義，不被制約的理想年代；暗夜仰望稀微星光，李雙澤的青春熱愛殉身山海兼美的淡水小鎮，影片結語是林洲民不勝欷歔的悼念。</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-none d-md-block">
+                        <div class="card bg-transparent border-0">
+                            <img class="w-100" src="./verse-images/ar-1-spe-6.jpg" class="card-img-top" alt="...">
+                            <div class="card-body px-0">
+                                <small class="my-2"><a class="mytext-tag" href="#">商業</a></small>
+                                <small class="my-2"><a class="mytext-tag" href="#">地方</a></small>
+                                <h4 class="card-title my-2"><a href="#">武俠導演胡金銓的動畫遺產：《張羽煮海》結合中式傳奇與台灣海洋風情</a></h4>
+                                <p class="card-text my-3"><a
+                                        href="#">《張羽煮海》是國家影視聽中心的精裝非賣品，「這本書最初只求推廣，暫時先不販售。」VERSE獨家揭秘，帶大家一探這可遇不可求的珍藏。</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" py-5 mytext-tag">
+                        <p class="text-center"><a class="mytext-tag" href="#">更多專文</a></p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Pictures and Videos ------------------------------>
+            <div class="row mt-5">
+                <h3 class="text-center"><a href="#">影像</a></h3>
+                <p class="text-center"><a href="#">Pictures & Videos</a></p>
+            </div>
+            <div class="px-4">
+                <div class="row col-12 justify-content-between m-0">
+                    <div class="col-md-4">
+                        <div class="card bg-transparent border-0">
+                            <img class="w-100" src="./verse-images/spe-7.jpg" class="card-img-top" alt="...">
+                            <div class="card-body px-0">
+                                <small class="my-2"><a class="mytext-tag" href="#">商業</a></small>
+                                <small class="my-2"><a class="mytext-tag" href="#">地方</a></small>
+                                <h4 class="card-title my-2"><a href="#">導演尹國賢的家：在平凡中創造不凡想像</a></h4>
+                                <p class="card-text my-3"><a href="#">「家對我來說像情人，會依賴它、花很多時間與它相處，而它也能包容我的各種面向。」尹國賢導演如是說。</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-transparent border-0">
+                            <img class="w-100" src="./verse-images/spe-8.jpg" class="card-img-top" alt="...">
+                            <div class="card-body px-0">
+                                <small class="my-2"><a class="mytext-tag" href="#">商業</a></small>
+                                <small class="my-2"><a class="mytext-tag" href="#">地方</a></small>
+                                <h4 class="card-title my-2"><a href="#">《GQ》總編輯杜祖業的家：從生活中發現處處講究的編輯學</a></h4>
+                                <p class="card-text my-3"><a
+                                        href="#">《GQ》總編輯杜祖業，工作上他是嚴厲的總編輯，頂著做工精細的眼鏡犀利看稿，私下則把個人品味毫不保留地注入家裡頭。</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-none d-md-block">
+                        <div class="card bg-transparent border-0">
+                            <img class="w-100" src="./verse-images/spe-9.png" class="card-img-top" alt="...">
+                            <div class="card-body px-0">
+                                <small class="my-2"><a class="mytext-tag" href="#">商業</a></small>
+                                <small class="my-2"><a class="mytext-tag" href="#">地方</a></small>
+                                <h4 class="card-title my-2"><a href="#">文化可以吃嗎？不務正業男子 Ayo 的家常食譜</a></h4>
+                                <p class="card-text my-3"><a href="#">CULTURE X RECIPE：YOU ARE WAHT YOU EAT</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-none d-md-block">
+                        <div class="card bg-transparent border-0">
+                            <img class="w-100" src="./verse-images/spe-10.png" class="card-img-top" alt="...">
+                            <div class="card-body px-0">
+                                <small class="my-2"><a class="mytext-tag" href="#">商業</a></small>
+                                <small class="my-2"><a class="mytext-tag" href="#">地方</a></small>
+                                <h4 class="card-title my-2"><a href="#">登曼波如何拍攝唐鳳：封面人物攝影師快問快答</a></h4>
+                                <p class="card-text my-3"><a
+                                        href="#">《VERSE》創刊號邀請攝影師登曼波，為此次封面人物——代表多元與開放的唐鳳政務委員籌劃了一系列具有特殊意義的拍攝製作，透過「登曼波
+                                        Ｑ＆Ａ：封面人物攝影師快問快答」，我們得以直入攝影師對於此次拍攝真實想法，了解這不僅僅是一場封面攝影，更是一次性別議題的深刻理解與轉化。</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-none d-md-block">
+                        <div class="card bg-transparent border-0">
+                            <img class="w-100" src="./verse-images/spe-11.png" class="card-img-top" alt="...">
+                            <div class="card-body px-0">
+                                <small class="my-2"><a class="mytext-tag" href="#">商業</a></small>
+                                <small class="my-2"><a class="mytext-tag" href="#">地方</a></small>
+                                <h4 class="card-title my-2"><a href="#">Snapshot</a></h4>
+                                <p class="card-text my-3"><a href="#">一張照片、一段文字，捕捉一些簡單卻重要的想法。第一輯：黃子佼、鄭宜農的「Why _______
+                                        Matters ?」</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-none d-md-block">
+                        <div class="card bg-transparent border-0">
+                            <img class="w-100" src="./verse-images/spe-12.jpg" class="card-img-top" alt="...">
+                            <div class="card-body px-0">
+                                <small class="my-2"><a class="mytext-tag" href="#">商業</a></small>
+                                <small class="my-2"><a class="mytext-tag" href="#">地方</a></small>
+                                <h4 class="card-title my-2"><a href="#">VERSE：支持一本很「好看」的雜誌，參與台灣的文化改變</a></h4>
+                                <p class="card-text my-3"><a href="#">《VERSE》 一個全新混種的文化媒體，是一年六本有思考深度又有獨特風格的雜誌書。
+                                        以探索台灣文化的新可能為核心，並討論各種公共議題與價值，分析創意如何改變商業，思索理想的生活樣貌，書寫屬於我們的時代精神。</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-5">
+                        <p class="text-center"><a class="mytext-tag" href="#">更多專文</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="position-relative">
+                <div class="footer-row row bg-dark text-light p-5 flex-column flex-xl-row justify-content-start mt-5 ">
+                    <div class="col-12 col-xl-3 mb-5">
+                        <h5>專文</h5>
+                        <p>Words & Images</p>
+                        <ul class="list-unstyled d-none d-xl-block">
+                            <li><small><a class="text-light" href="#">重磅</a></small></li>
+                            <li><small><a class="text-light" href="#">觀念</a></small></li>
+                            <li><small><a class="text-light" href="#">商業</a></small></li>
+                            <li><small><a class="text-light" href="#">藝文</a></small></li>
+                            <li><small><a class="text-light" href="#">生活</a></small></li>
+                            <li><small><a class="text-light" href="#">專題</a></small></li>
+                            <li><small><a class="text-light" href="#">更多文章</a></small></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-xl-3 mb-5">
+                        <h5>專欄</h5>
+                        <p>Columns</p>
+                        <ul class="list-unstyled d-none d-xl-block">
+                            <li><small><a class="text-light" href="#">鄭宜農</a></small></li>
+                            <li><small><a class="text-light" href="#">張惠菁</a></small></li>
+                            <li><small><a class="text-light" href="#">王君琦</a></small></li>
+                            <li><small><a class="text-light" href="#">陳小曼</a></small></li>
+                            <li><small><a class="text-light" href="#">Ayo</a></small></li>
+                            <li><small><a class="text-light" href="#">更多專欄作者</a></small></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-xl-3 mb-5">
+                        <h5>影像</h5>
+                        <p>Videos & Pictures</p>
+                        <ul class="list-unstyled d-none d-xl-block">
+                            <li><small><a class="text-light" href="#">影音觀點</a></small></li>
+                            <li><small><a class="text-light" href="#">圖輯視界</a></small></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-xl-3 mb-5">
+                        <h5>雜誌</h5>
+                        <p>Magzine</p>
+                        <ul class="list-unstyled d-none d-xl-block">
+                            <li><small><a class="text-light" href="#">訂閱一年六期</a></small></li>
+                            <li><small><a class="text-light" href="#">訂閱兩年十二期</a></small></li>
+                            <li><small><a class="text-light" href="#">博客來</a></small></li>
+                            <li><small><a class="text-light" href="#">誠品</a></small></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-xl-3 mb-5">
+                        <h5>商鋪</h5>
+                        <p>Shops</p>
+                        <ul class="list-unstyled d-none d-xl-block">
+                            <li><small><a class="text-light" href="#">VERSE COOL STUFF</a></small></li>
+                            <li><small><a class="text-light" href="#">VERSE SPRING FESTIVAL</a></small></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-xl-3 mb-5">
+                        <h5>資訊</h5>
+                        <p>Info</p>
+                        <ul class="list-unstyled d-none d-xl-block">
+                            <li><small><a class="text-light" href="#">關於我們</a></small></li>
+                            <li><small><a class="text-light" href="#">聯絡我們</a></small></li>
+                            <li><small><a class="text-light" href="#">最新消息</a></small></li>
+                            <li><small><a class="text-light" href="#">訂閱電子報</a></small></li>
+                            <li><small><a class="text-light" href="#">隱私政策</a></small></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-logo position-absolute">
+                    <img src="./verse-images/footerLogo.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+    
+            <div class="footer-bar row justify-content-center justify-content-lg-end align-items-center">
+                <img class="px-2" src="./verse-images/footer-fb.svg" alt="">
+                <img class="px-2" src="./verse-images/footer-ig.svg" alt="">
+                <small class="px-3">Copyright © VERSE, all rights reserved.</small>
+        
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
