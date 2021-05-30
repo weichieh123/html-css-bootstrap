@@ -5,411 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 改bootstrap4會錯 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
     <title>BS Frans Hals</title>
-    <style>
-        /* * {
-            outline: 1px solid red;
-        } */
-
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        .row {
-            margin: 0;
-        }
-
-        /* 手機版 */
-        /* .nav-bar {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            height: 4vw;
-            width: 100%;
-            background-color: #231f20;
-        } */
-
-        a {
-            text-decoration: none;
-        }
-
-        .textDark {
-            color: #231f20;
-        }
-
-        .textHero {
-            color: #fce373;
-        }
-
-        .bgHero {
-            background-color: #fce373;
-        }
-
-        .bgDark {
-            background-color: #231f20;
-        }
-
-        .bgCard {
-            background-color: #9CD08E;
-        }
-
-        /* --------------------桌機尺寸---------------------------------- */
-        /* @media screen and (min-width: 1025px) { */
-        .nav-bar {
-            position: fixed;
-            flex: 0 0 auto;
-            height: 100vh;
-            width: 4vw;
-            background-color: #231f20;
-            z-index: 1000;
-        }
-        .nav-bar i {
-            font-size: 35px;
-        }
-        .navBtn {
-            width: 50px;
-            height: 50px;
-            background-color: #fce373;
-            border-radius: 50% ;
-            text-align: center;
-            margin-right: -40px;
-            border: 4px solid #231f20;
-            box-sizing: content-box;
-        }
-        .navBtn i{
-            line-height: 50px;
-        }
-        
-        /* logo顯示不出來 */
-        .logo {
-            width: 150px;
-            height: 56px;
-            /* z-index: 99; */
-
-        }
-
-        .logo img {
-            width: 100%;
-            /* z-index: 99; */
-        }
-
-        .home-hero {
-            background-color: #fce373;
-            width: 100%;
-            height: 430px;
-        }
-
-        .home-heroTitle {
-            font-size: 186px;
-            font-family: raisonne-demibold, Raisonne, Futura, Helvetica, Arial, sans-serif;
-            font-weight: 600;
-            letter-spacing: .02em;
-            line-height: .9em;
-        }
-
-        .home-heroSubtitle {
-            display: block;
-            width: calc(100% - 6vw);
-            margin: auto;
-            font-size: 28px;
-            margin-bottom: 100px;
-        }
-
-        .keyButton {
-            width: 270px;
-            height: 60px;
-            line-height: 60px;
-        }
-
-        .keyButton a {
-            font-size: 30px;
-            font-weight: bolder;
-        }
-
-        .exhiButton-row {
-            width: 100%;
-            /* height: 750px; */
-            background-color: #cca69a;
-        }
-
-        .exhi-row {
-            height: 690px;
-            background-color: #cca69a;
-            padding-top: 10vh;
-        }
-
-        .eCardWrap {
-            width: 100vw;
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
-        }
-
-        .eCard {
-            width: 32vw;
-            padding: 2vw;
-            box-sizing: border-box;
-            position: absolute;
-            background-color: #9CD08E;
-
-        }
-
-        .eCard1 {
-            left: 8%;
-        }
-
-        .eCard2 {
-            left: 48%;
-        }
-
-        .eCard3 {
-            left: 88%;
-        }
-
-        .ePic {
-            width: 100%;
-            height: 26vw;
-            overflow: hidden;
-            background-size: cover;
-            background-position: center;
-
-        }
-
-        .ePic1 {
-            background-image: url(./images/ePic1.jpg);
-        }
-
-        .ePic2 {
-            background-image: url(./images/ePic2.jpg);
-        }
-
-        .ePic3 {
-            background-image: url(./images/ePic3.png);
-        }
-
-        .ePic img {
-            height: 100%;
-
-        }
-
-        .eTitle {
-            font-size: 45px;
-            line-height: 40.5px;
-            text-align: center;
-            padding-top: 60px;
-            margin-bottom: -50px;
-            font-weight: 600;
-            letter-spacing: .02em;
-        }
-
-        .discover-row {
-            width: 100%;
-            height: 800px;
-            background-color: #f37449;
-        }
-
-        .video-wrap {
-            width: 40vw;
-            height: 100vh;
-            /* margon nav-bar的寬度 */
-            margin-left: 4vw;
-            padding: 0;
-            overflow: hidden;
-            position: relative;
-        }
-        .video-wrap.fixed {
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-
-        .video {
-            width: 100%;
-            height: 50%;
-        }
-
-        .video img {
-            /* object-fit: cover;
-                object-position: bottom; */
-            width: 100%;
-        }
-
-        .play-btn {
-            width: 4vw;
-            height: 4vw;
-            border-radius: 50%;
-            background-color: #f37449;
-            position: absolute;
-            z-index: 100;
-            top: 45vh;
-            left: 18vw;
-        }
-
-        .discover-wrap {
-            width: 50vw;
-        }
-        .discover-wrap.fixed {
-            position: fixed;
-            right: 0;
-        }
-
-        .disTitle {
-            font-size: 110px;
-            font-weight: 600;
-            letter-spacing: .02em;
-            line-height: .9em;
-            width: fit-content;
-        }
-
-        .disPic-wrap {
-            background-color: #9CD08E;
-            padding: 1.5vw;
-        }
-        .disPic {
-            width: 16vw;
-            height: 12vw;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-        }
-        .disPic1 {
-            background-image: url(./images/disPic1.jpg);
-        }
-
-        .disPic2 {
-            background-image: url(./images/disPic2.jpg);
-        }
-        .disSubtitle {
-            width: 40vw;
-        }
-        .new-row {
-            width: 100%;
-            height: 800px;
-            background-color: #a385bd;
-        }
-        .newPic-wrap {
-            width: 40vw;
-            height: 100vh;
-            /* margon nav-bar的寬度 */
-            margin-left: 4vw;
-            padding: 0;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .new {
-            width: 100%;
-            height: 50%;
-        }
-
-        .new img {
-            /* object-fit: cover;
-                object-position: bottom; */
-            width: 100%;
-        }
-        .new-bottom img {
-            /* 不知道怎麼讓圖片以bottom為中心 */
-            object-position: bottom;
-        }
-        .new-wrap {
-            width: 50vw;
-        }
-        .newTitle {
-            font-family: raisonne-demibold,Raisonne,Futura,Helvetica,Arial,sans-serif;
-            font-size: 110px;
-            font-weight: 600;
-            letter-spacing: .02em;
-            line-height: .9em;
-            width: fit-content;
-        }
-        .new-col {
-            width: 50%;
-        }
-        .newCol-left{
-
-            border-right: 3px solid #231f20;
-        }
-        .newPic-left {
-            width: 10vw;
-            height: 10vw;
-            background: url(./images/newPic-left.png);
-            background-size: cover;
-            background-position: center;
-            border: 12px solid #F29C50;
-            margin-top: 8vw; 
-        }
-        .newPic-right {
-            width: 10vw;
-            height: 10vw;
-            background: url(./images/newPic-right.jpg);
-            background-size: cover;
-            background-position: center;
-            border: 12px solid #F29C50;  
-        }
-        .new-left img {
-            object-fit: cover;
-        }
-        
-        .footer-row {
-            width: 100%;
-            height: 500px;
-            background-color: #fce373;
-        }
-        .footer-wrap {
-            margin: 80px 0;
-            padding: 0 5vw;
-        }
-        .footer-left {
-            border-right: 2px solid #231f20;
-        }
-        .input {
-            width: 40%;
-            text-align: start;
-            border-bottom: 1px solid black;
-        }
-        .signup {
-
-            width: 130px;
-            height: 40px;
-            background-color: rgba(145, 137, 137, 0.479);
-            border-radius: 20px;
-            color: #fce373;
-            font-size: 18px;
-            line-height: 32px;
-        }
-        .hofPic, .halPic {
-            width: 100px;
-            height: 100px;
-            background-color: #F29C50;
-        }
-        .footer-bottom {
-            padding-left: 4vw;
-        }
-        .footer-icon {
-            margin-right: auto;
-        }
-        .footer-link {
-            width: 550px;
-        }
-        .footer-svg {
-            margin-left: auto;
-        }
-        
-        /* } */
-    </style>
+    
 </head>
 
 <body>
 
+    
     <div class="container-fluid p-0">
         <div class="nav-bar d-flex flex-column align-items-center justify-content-center">
             <i class="far fa-calendar textHero p-2 my-4"></i>
-            <i class="fas fa-ticket-alt textHero p-2 my-4"></i>
+            <!-- <i class="fas fa-ticket-alt textHero p-2 my-4"></i> -->
+            <button data-toggle="popover" data-container="body"  data-placement="right" data-content="buy" class="btn fit-content my-4 p-0" ><i class="fas fa-ticket-alt textHero p-2 "></i></button>
+            
+
             <div class="navBtn my-4"><i class="fas fa-bars textDark"></i></div>
             <i class="fas fa-search textHero p-2 my-4"></i>
             <i class="fas fa-map-marker-alt textHero p-2 my-4"></i>
@@ -449,7 +65,7 @@
             </div>
         </div>
         <div class="row discover-row">
-            <div id="video-wrap" class="video-wrap">
+            <div id="video-wrap" class="video-wrap ">
                 <div class="video video-top">
                     <img src="./images/video-top.jpg" alt="">
                 </div>
@@ -495,7 +111,7 @@
             </div>
         </div>
         <div class="row new-row">
-            <div class="newPic-wrap">
+            <div id="newPic-wrap" class="newPic-wrap">
                 <div class="new new-top">
                     <img src="./images/newPic-top.jpg" alt="">
                 </div>
@@ -522,7 +138,7 @@
                 </div>
             </div>
         </div>
-        <div class="row footer-row">
+        <div id="footer-row" class="row footer-row">
             <div class="footer-wrap d-flex text-center">
                 <div class="col footer-left d-flex flex-column">
                     <small class="mt-4">NEWSLETTER</small>
@@ -538,13 +154,13 @@
                     <small class="mt-4">ONE MUSEUM TWO LOCATIONS</small>
                     <div class="d-flex justify-content-evenly mt-3">
                         <div class="hof">
-                            <div class="hofPic mx-auto"></div>
+                            <div class="hofPic mx-auto mb-2"></div>
                             <h6>HOF</h6>
                             <h6>Groot Heiligland 62 <br>2011 ES Haarlem</h6>
                             <h6>Opening hours</h6>
                         </div>
                         <div class="hal">
-                            <div class="halPic mx-auto"></div>
+                            <div class="halPic mx-auto mb-2"></div>
                             <h6>HAL</h6>
                             <h6>Grote Markt 16 <br>2011 RD Haarlem</h6>
                             <h6>Opening hours</h6>
@@ -555,9 +171,9 @@
             </div>
             <div class="d-flex footer-bottom mb-5 justify-content-center">
                 <div class="footer-icon">
-                    <i class="fab fa-facebook-square mx-3"></i>
-                    <i class="fab fa-twitter-square mx-3"></i>
-                    <i class="fab fa-instagram mx-3"></i>
+                    <i class="fab fa-facebook-square mx-2"></i>
+                    <i class="fab fa-twitter-square mx-2"></i>
+                    <i class="fab fa-instagram mx-2"></i>
                 </div>
                 <div class="footer-link d-flex justify-content-center ml-auto">
                     <a class="mx-auto text-dark" href="">Terms</a>
@@ -576,16 +192,39 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>
-        const videoTop = $('#video-wrap').offset.top;
-        
-        // $(window).scroll(function(){
-        //     if($(this).scrollTop()>= videoTop){
-        //         $('#video-wrap').addClass('fixed');
-        //     } else {
-        //         $('#video-wrap').removeClass('fixed');
-        //     }
 
-        // });
+        const videoTop = $('#video-wrap').offset().top;
+        const newPicTop = $('#newPic-wrap').offset().top;
+        const footerRowTop = $('#footer-row').offset().top;
+        const newPicRightTop = $('.newPic-right').offset().top;
+        
+        $(window).scroll(function(){
+            console.log('scrollTop',$(this).scrollTop());
+            console.log('videoTop',videoTop);
+            console.log('newPicTop',newPicTop);
+            console.log('footerRowTop',footerRowTop);
+            
+
+
+
+            if($(this).scrollTop()>= videoTop && $(this).scrollTop() <= newPicTop){
+                $('#video-wrap').addClass('fixed');
+            } else {
+                $('#video-wrap').removeClass('fixed');
+            }
+
+            if($(this).scrollTop()>= newPicRightTop-$(this).height() && $(this).scrollTop() <= footerRowTop-$(this).height()){
+                $('#newPic-wrap').addClass('fixed').addClass('bottom');
+                
+            } else {
+                $('#newPic-wrap').removeClass('fixed');
+            }
+            //  else if(footerRowTop <= $(this).scrollTop() && $(this).scrollTop() < $(body).hight() ){
+            //     $('#newPic-wrap').removeClass('fixed').addClass('bottom').removeClass('top');;
+            // }
+            
+
+        });
     </script>
 
 </body>
