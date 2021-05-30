@@ -1,6 +1,15 @@
-/* <style> */
+
     /* * {
         outline: 1px solid red;
+    } */
+    /* 手機版 */
+    /* .nav-bar {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        height: 4vw;
+        width: 100%;
+        background-color: #231f20;
     } */
 
     body {
@@ -12,15 +21,8 @@
         margin: 0;
     }
 
-    /* 手機版 */
-    /* .nav-bar {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        height: 4vw;
-        width: 100%;
-        background-color: #231f20;
-    } */
+    
+    
 
     a {
         text-decoration: none;
@@ -46,8 +48,7 @@
         background-color: #9CD08E;
     }
 
-    /* --------------------桌機尺寸---------------------------------- */
-    /* @media screen and (min-width: 1025px) { */
+    
     .nav-bar {
         position: fixed;
         flex: 0 0 auto;
@@ -73,17 +74,13 @@
         line-height: 50px;
     }
     
-    /* logo顯示不出來 */
     .logo {
         width: 150px;
         height: 56px;
-        /* z-index: 99; */
-
     }
 
     .logo img {
         width: 100%;
-        /* z-index: 99; */
     }
 
     .home-hero {
@@ -144,7 +141,6 @@
         box-sizing: border-box;
         position: absolute;
         background-color: #9CD08E;
-
     }
 
     .eCard1 {
@@ -182,7 +178,6 @@
 
     .ePic img {
         height: 100%;
-
     }
 
     .eTitle {
@@ -226,7 +221,7 @@
 
     .video img {
         /* object-fit: cover;
-            object-position: bottom; */
+        object-position: bottom; */
         width: 100%;
     }
     
@@ -294,7 +289,6 @@
         overflow: hidden;
         position: absolute;
         /* top: 0; */
-        
     }
     .newPic-wrap.top {
         top: 0;
@@ -406,5 +400,3 @@
         margin-left: auto;
     }
     
-        /* } */
-    /* </style> */
